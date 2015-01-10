@@ -2,19 +2,14 @@ package stats
 
 import (
 	//"fmt"
-	//"math"
+	"math"
 )
 
 func Variance(sample []float64, wholepop bool) float64 {
 //	sample := []float64{20,22,1,7,4}
 //	wholepop := false
 
-	sum := float64(0)
-	for i := range sample {
-		sum += sample[i]
-	}
-
-	avg := sum / float64(len(sample))
+	avg := Average(sample)
 
 	// variance
 	squarediff := float64(0)
@@ -36,4 +31,8 @@ func Variance(sample []float64, wholepop bool) float64 {
 	*/
 	
 	return variance
+}
+
+func StdDev(sample []float64, wholepop bool) float64 {
+	return math.Sqrt(Variance(sample, wholepop))
 }
