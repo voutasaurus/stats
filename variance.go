@@ -6,8 +6,8 @@ import (
 )
 
 func Variance(sample []float64, wholepop bool) float64 {
-//	sample := []float64{20,22,1,7,4}
-//	wholepop := false
+	//	sample := []float64{20,22,1,7,4}
+	//	wholepop := false
 
 	avg := Average(sample)
 
@@ -29,7 +29,7 @@ func Variance(sample []float64, wholepop bool) float64 {
 	fmt.Println("variance:", variance)
 	fmt.Println("standard deviation:", math.Sqrt(variance))
 	*/
-	
+
 	return variance
 }
 
